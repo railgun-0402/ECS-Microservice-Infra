@@ -31,7 +31,7 @@ jobs:
 
       # AWS認証
       - name: Assume Role
-        uses: aws-actions/configure-aws-credentials@v1-node22
+        uses: aws-actions/configure-aws-credentials@v3
         with:
           role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/GitHubActionsOIDC
           aws-region: ap-northeast-1
