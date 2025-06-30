@@ -29,6 +29,11 @@ jobs:
           mv /tmp/tfcmt /usr/local/bin
           tfcmt --version
 
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.7.5
+
       # AWS認証
       - name: Assume Role
         uses: aws-actions/configure-aws-credentials@v3
