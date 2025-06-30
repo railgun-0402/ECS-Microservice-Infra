@@ -20,6 +20,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # plan/applyの結果を GitHub にコメントとして通知できる
       - name: Setup tfcmt
         env:
           TFCMT_VERSION: v4.0.0
@@ -49,6 +50,7 @@ jobs:
         id: init
         run: terraform init
 
+      # HCLの構文チェック
       - name: Terraform Validate
         id: validate
         run: terraform validate -no-color
